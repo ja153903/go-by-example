@@ -5,8 +5,9 @@ import "fmt"
 func main() {
 
 	messages := make(chan string, 2)
-
-	messages <- "buffered"
+	
+	msg := "buffered"
+	messages <- msg
 	messages <- "channel"
 
 	fmt.Println(<-messages)
